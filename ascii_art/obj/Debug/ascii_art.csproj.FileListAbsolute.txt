@@ -1,0 +1,9 @@
+C:\Users\Russell\Source\ascii_art_generator\ascii_art\bin\Debug\ascii_art.exe.config
+C:\Users\Russell\Source\ascii_art_generator\ascii_art\bin\Debug\ascii_art.exe
+C:\Users\Russell\Source\ascii_art_generator\ascii_art\bin\Debug\ascii_art.pdb
+C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.csprojResolveAssemblyReference.cache
+C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.Form1.resources
+C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.Properties.Resources.resources
+C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.csproj.GenerateResource.Cache
+C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.exe
+C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.pdb
