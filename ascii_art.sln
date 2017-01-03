@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ascii_art", "ascii_art\ascii_art.csproj", "{7BD41838-420C-4A35-B8DA-3CA50BFEFA51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ascii_art_winform", "ascii_art\ascii_art_winform.csproj", "{7BD41838-420C-4A35-B8DA-3CA50BFEFA51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asciiImageConverter", "asciiImageConverter\asciiImageConverter.csproj", "{1D6E9D9D-2ECA-43EF-A62E-E810580AC794}"
 EndProject
@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ascii_art_console", "ascii_art_console\ascii_art_console.csproj", "{E1C4B5EE-EDE4-42A6-9DD0-A80E778BF5D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{1D6E9D9D-2ECA-43EF-A62E-E810580AC794}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D6E9D9D-2ECA-43EF-A62E-E810580AC794}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D6E9D9D-2ECA-43EF-A62E-E810580AC794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1C4B5EE-EDE4-42A6-9DD0-A80E778BF5D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C4B5EE-EDE4-42A6-9DD0-A80E778BF5D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C4B5EE-EDE4-42A6-9DD0-A80E778BF5D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C4B5EE-EDE4-42A6-9DD0-A80E778BF5D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

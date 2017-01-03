@@ -10,6 +10,8 @@ namespace ascii_art
     {
         private string output;
         private string filename;
+        private string filename_full;
+
         public Form1()
         {
             InitializeComponent();
@@ -45,6 +47,7 @@ namespace ascii_art
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 filename = Path.GetFileNameWithoutExtension(openFileDialog1.FileName);
+                filename_full = openFileDialog1.FileName;
             }
 
         }
@@ -93,7 +96,7 @@ namespace ascii_art
                     StreamWriter sw;
 
                     // get the output string
-                    output = AsciiConverter.ConvertAscii(stream, txtBxScale.Text, charH, charW);
+                    output = AsciiConverter.ConvertAscii(filename_full, txtBxScale.Text, charH, charW);
                     sw = new StreamWriter(stream);
                     // write output;
                     sw.WriteLine(output);

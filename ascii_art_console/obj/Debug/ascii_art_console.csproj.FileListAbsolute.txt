@@ -1,0 +1,8 @@
+C:\dev\ascii_art_generator\ascii_art_console\bin\Debug\ascii_art_console.exe.config
+C:\dev\ascii_art_generator\ascii_art_console\bin\Debug\ascii_art_console.exe
+C:\dev\ascii_art_generator\ascii_art_console\bin\Debug\ascii_art_console.pdb
+C:\dev\ascii_art_generator\ascii_art_console\obj\Debug\ascii_art_console.csprojResolveAssemblyReference.cache
+C:\dev\ascii_art_generator\ascii_art_console\obj\Debug\ascii_art_console.exe
+C:\dev\ascii_art_generator\ascii_art_console\obj\Debug\ascii_art_console.pdb
+C:\dev\ascii_art_generator\ascii_art_console\bin\Debug\asciiImageConverter.dll
+C:\dev\ascii_art_generator\ascii_art_console\bin\Debug\asciiImageConverter.pdb
