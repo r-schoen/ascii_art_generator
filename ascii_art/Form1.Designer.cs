@@ -80,28 +80,28 @@
             // loadImageToolStripMenuItem
             // 
             this.loadImageToolStripMenuItem.Name = "loadImageToolStripMenuItem";
-            this.loadImageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadImageToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.loadImageToolStripMenuItem.Text = "&Load Image";
             this.loadImageToolStripMenuItem.Click += new System.EventHandler(this.loadImageToolStripMenuItem_Click);
             // 
             // exportImageToolStripMenuItem
             // 
             this.exportImageToolStripMenuItem.Name = "exportImageToolStripMenuItem";
-            this.exportImageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exportImageToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.exportImageToolStripMenuItem.Text = "&Export Image";
             this.exportImageToolStripMenuItem.Click += new System.EventHandler(this.exportImageToolStripMenuItem_Click);
             // 
             // closeImageToolStripMenuItem
             // 
             this.closeImageToolStripMenuItem.Name = "closeImageToolStripMenuItem";
-            this.closeImageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.closeImageToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.closeImageToolStripMenuItem.Text = "&Close Image";
             this.closeImageToolStripMenuItem.Click += new System.EventHandler(this.closeImageToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -191,6 +191,7 @@
             this.txtBxScale.Name = "txtBxScale";
             this.txtBxScale.Size = new System.Drawing.Size(384, 20);
             this.txtBxScale.TabIndex = 4;
+            this.txtBxScale.TextChanged += new System.EventHandler(this.txtBxScale_TextChanged);
             // 
             // label5
             // 

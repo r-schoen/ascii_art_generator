@@ -7,7 +7,6 @@ namespace ascii_art
 {
     public partial class Form1 : Form
     {
-        private Bitmap bit;
         private string output;
         private string filename;
         public Form1()
@@ -44,17 +43,12 @@ namespace ascii_art
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string ext = Path.GetExtension(openFileDialog1.FileName);
                 filename = Path.GetFileNameWithoutExtension(openFileDialog1.FileName);
-
-                if (ext == ".bmp" || ext == ".jpg" || ext == ".png" || ext == ".tiff")
-                {
-                    bit = new Bitmap(openFileDialog1.FileName);
-                }
             }
 
         }
-
+        
+        [Obsolete("This method is obsolete. Please use the static ConvertAscii() method instead.")]
         private bool bmpToText()
         {
             int charH, charW;
@@ -136,6 +130,7 @@ namespace ascii_art
             {
                 if ((stream = saveFileDialog1.OpenFile()) != null)
                 {
+
                     StreamWriter sw;
                     if (bmpToText()) // call text converter
                     {
@@ -177,6 +172,11 @@ namespace ascii_art
         private void btnScaleLong_Click(object sender, EventArgs e)
         {
             SetScaleLong();
+        }
+
+        private void txtBxScale_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
