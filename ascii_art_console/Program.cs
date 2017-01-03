@@ -25,13 +25,48 @@ namespace ascii_art_console
             {
                 using (var bmp = new Bitmap(args[0]))
                 {
-                    string outName = Path.ChangeExtension(args[0], ".txt");
+                    string outName;
 
-                    // TODO: parse args here
-                    scale = "@%#*+=-:. ";
-                    charH = 9;
-                    charW = 5;
+                    // argument syntax: /charw=5
+                    var parsedArgs = args
+                                    .Where(s => s[0] == '/') // gets items that start with /
+                                    .Select(s => s.Substring(1).Split('=')) // splits into substring array using = as delimitor
+                                    .ToDictionary(s => s[0], y => y[1]); // turns into dictionary
 
+                    #region Set Defaults
+                    if (!parsedArgs.ContainsKey("charw"))
+                        charW = 5;
+                    else
+                    {
+                        if(!int.TryParse(parsedArgs["charw"], out charW))
+                        {
+                            Console.WriteLine("Error getting char width");
+                            return;
+                        }
+                    }
+                    if (!parsedArgs.ContainsKey("charh"))
+                        charH = 9;
+                    else
+                    {
+                        if(!int.TryParse(parsedArgs["charh"], out charH))
+                        {
+                            Console.WriteLine("Error getting char height");
+                            return;
+                        }
+                    }
+                    if (!parsedArgs.ContainsKey("scale"))
+                        scale = "@%#*+=-:. ";
+                    else
+                    {
+                        scale = parsedArgs["scale"].Trim('"');
+                    }
+                    if (!parsedArgs.ContainsKey("out"))
+                        outName = Path.ChangeExtension(args[0], ".txt");
+                    else
+                    {
+                        outName = parsedArgs["out"];
+                    }
+                    #endregion
                     string output = AsciiConverter.ConvertAscii(args[0], scale, charH, charW);
 
                     using (var sw = new StreamWriter(outName))

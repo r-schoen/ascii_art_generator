@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>selfie.jpg /out=filename.txt /scale="%24%40B%258&amp;WM#%2aoahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|%28%291{}[]%3f-_+~&lt;&gt;i!lI%3b:,\" ^`%27. "</StartArguments>
+  </PropertyGroup>
+</Project>
