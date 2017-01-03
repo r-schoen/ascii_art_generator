@@ -6,21 +6,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace asciiImageConverter
+namespace AsciiImageConverter
 {
-    public class Class1
+    public class AsciiConverter
     {
 
-        public static string ConvertAscii(Stream imageStream, 
+        /// <summary>
+        /// Takes in a stream, and outputs a string for output to file.
+        /// </summary>
+        /// <param name="imageStream"></param>
+        /// <param name="greyscale"></param>
+        /// <param name="charH"></param>
+        /// <param name="charW"></param>
+        /// <returns></returns>
+        public static string ConvertAscii(Stream inputImageStream, 
                                     string greyscale = "@%#*+=-:. ",
                                     int charH = 9,
                                     int charW = 5)
         {
             string output = "";
-            // TODO: some stuff
-            Bitmap bit = new Bitmap(imageStream);
 
-            output = "";
+            // create bitmap of input stream
+            Bitmap bit = new Bitmap(inputImageStream);
+            
             //begin outer loop. searches in 5x7 blocks
             for (int yo = 0; yo < bit.Height; yo += charH)
             {

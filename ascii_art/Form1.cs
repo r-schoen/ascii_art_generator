@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using AsciiImageConverter;
 
 namespace ascii_art
 {
@@ -47,58 +48,6 @@ namespace ascii_art
             }
 
         }
-        
-        [Obsolete("This method is obsolete. Please use the static ConvertAscii() method instead.")]
-        private bool bmpToText()
-        {
-            int charH, charW;
-            if (int.TryParse(txtBxCharH.Text, out charH) == false)
-            {
-                MessageBox.Show("The text boxes must contain numbers.");
-                return false;
-            }
-            if (int.TryParse(txtBxCharW.Text, out charW) == false)
-            {
-                MessageBox.Show("The text boxes must contain numbers.");
-                return false;
-            }
-            output = "";
-            string greyscale = txtBxScale.Text;
-            //begin outer loop. searches in 5x7 blocks
-            for (int yo = 0; yo < bit.Height; yo += charH)
-            {
-                if (yo + charH < bit.Height) //to avoid going over boundaries
-                {
-                    for (int xo = 0; xo < bit.Width; xo += charW)
-                    {
-                        if (xo + charW < bit.Width)
-                        {
-                            //begin inner loop. searches every pixel in a single block.
-                            int avgTotal = 0;
-                            double scaleNumber;
-                            for (int yi = 0; yi < charH; yi++)
-                            {
-                                for (int xi = 0; xi < charW; xi++)
-                                {
-                                    int x = xi + xo;
-                                    int y = yi + yo;
-                                    Color newColor = bit.GetPixel(x, y);
-                                    int avg = (newColor.R + newColor.G + newColor.B) / 3;
-                                    avgTotal += avg;
-
-                                }
-                            }
-                            double avgFinal = avgTotal / (charH * charW);
-                            double avgFinalPercent = avgFinal / 255;
-                            scaleNumber = avgFinalPercent * greyscale.Length;
-                            output += greyscale[(int)scaleNumber];
-                        }
-                    }
-                    output += "\r\n";
-                }
-            }
-            return true;
-        }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -130,14 +79,27 @@ namespace ascii_art
             {
                 if ((stream = saveFileDialog1.OpenFile()) != null)
                 {
+                    int charW, charH;
+                    
+                    if (int.TryParse(txtBxCharH.Text, out charH) == false)
+                    {
+                        MessageBox.Show("The text boxes must contain numbers.");
+                    }
+                    if (int.TryParse(txtBxCharW.Text, out charW) == false)
+                    {
+                        MessageBox.Show("The text boxes must contain numbers.");
+                    }
 
                     StreamWriter sw;
-                    if (bmpToText()) // call text converter
-                    {
-                        sw = new StreamWriter(stream);
-                        sw.WriteLine(output);
-                        sw.Close();
-                    }
+
+                    // get the output string
+                    output = AsciiConverter.ConvertAscii(stream, txtBxScale.Text, charH, charW);
+                    sw = new StreamWriter(stream);
+                    // write output;
+                    sw.WriteLine(output);
+
+                    // close stream and stream writer
+                    sw.Close();
                     stream.Close();
                 }
             }

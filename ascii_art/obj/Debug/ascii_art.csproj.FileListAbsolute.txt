@@ -10,3 +10,11 @@ C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.pdb
 C:\dev\ascii_art_generator\ascii_art\bin\Debug\ascii_art.exe.config
 C:\dev\ascii_art_generator\ascii_art\obj\Debug\ascii_art.exe
 C:\dev\ascii_art_generator\ascii_art\obj\Debug\ascii_art.pdb
+C:\dev\ascii_art_generator\ascii_art\obj\Debug\ascii_art.csprojResolveAssemblyReference.cache
+C:\dev\ascii_art_generator\ascii_art\obj\Debug\ascii_art.Form1.resources
+C:\dev\ascii_art_generator\ascii_art\obj\Debug\ascii_art.Properties.Resources.resources
+C:\dev\ascii_art_generator\ascii_art\obj\Debug\ascii_art.csproj.GenerateResource.Cache
+C:\dev\ascii_art_generator\ascii_art\bin\Debug\ascii_art.exe
+C:\dev\ascii_art_generator\ascii_art\bin\Debug\ascii_art.pdb
+C:\dev\ascii_art_generator\ascii_art\bin\Debug\asciiImageConverter.dll
+C:\dev\ascii_art_generator\ascii_art\bin\Debug\asciiImageConverter.pdb

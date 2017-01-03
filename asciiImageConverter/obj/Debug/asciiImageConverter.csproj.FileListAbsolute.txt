@@ -1,0 +1,5 @@
+C:\dev\ascii_art_generator\asciiImageConverter\bin\Debug\asciiImageConverter.dll
+C:\dev\ascii_art_generator\asciiImageConverter\bin\Debug\asciiImageConverter.pdb
+C:\dev\ascii_art_generator\asciiImageConverter\obj\Debug\asciiImageConverter.csprojResolveAssemblyReference.cache
+C:\dev\ascii_art_generator\asciiImageConverter\obj\Debug\asciiImageConverter.dll
+C:\dev\ascii_art_generator\asciiImageConverter\obj\Debug\asciiImageConverter.pdb
