@@ -10,7 +10,9 @@ namespace asciiImageConverter
     {
         public static string ConvertAscii()
         {
-            return "";
+            string output = "";
+            // TODO: some stuff
+            return output;
         }
     }
 }
