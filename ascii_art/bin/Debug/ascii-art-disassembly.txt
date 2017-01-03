@@ -1,0 +1,1979 @@
+
+//  Microsoft (R) .NET Framework IL Disassembler.  Version 4.6.1055.0
+//  Copyright (c) Microsoft Corporation.  All rights reserved.
+
+
+
+// Metadata version: v4.0.30319
+.assembly extern mscorlib
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 4:0:0:0
+}
+.assembly extern System.Windows.Forms
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 4:0:0:0
+}
+.assembly extern System.Drawing
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 4:0:0:0
+}
+.assembly extern System
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 4:0:0:0
+}
+.assembly ascii_art
+{
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(int32) = ( 01 00 08 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor() = ( 01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+                                                                                                             63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01 )       // ceptionThrows.
+
+  // --- The following custom attribute is added automatically, do not uncomment -------
+  //  .custom instance void [mscorlib]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [mscorlib]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ( 01 00 07 01 00 00 00 00 ) 
+
+  .custom instance void [mscorlib]System.Reflection.AssemblyTitleAttribute::.ctor(string) = ( 01 00 09 61 73 63 69 69 5F 61 72 74 00 00 )       // ...ascii_art..
+  .custom instance void [mscorlib]System.Reflection.AssemblyDescriptionAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyConfigurationAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyCompanyAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyProductAttribute::.ctor(string) = ( 01 00 09 61 73 63 69 69 5F 61 72 74 00 00 )       // ...ascii_art..
+  .custom instance void [mscorlib]System.Reflection.AssemblyCopyrightAttribute::.ctor(string) = ( 01 00 12 43 6F 70 79 72 69 67 68 74 20 C2 A9 20   // ...Copyright .. 
+                                                                                                  20 32 30 31 36 00 00 )                            //  2016..
+  .custom instance void [mscorlib]System.Reflection.AssemblyTrademarkAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComVisibleAttribute::.ctor(bool) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 37 62 64 34 31 38 33 38 2D 34 32 30 63   // ..$7bd41838-420c
+                                                                                                  2D 34 61 33 35 2D 62 38 64 61 2D 33 63 61 35 30   // -4a35-b8da-3ca50
+                                                                                                  62 66 65 66 61 35 31 00 00 )                      // bfefa51..
+  .custom instance void [mscorlib]System.Reflection.AssemblyFileVersionAttribute::.ctor(string) = ( 01 00 07 31 2E 30 2E 30 2E 30 00 00 )             // ...1.0.0.0..
+  .custom instance void [mscorlib]System.Runtime.Versioning.TargetFrameworkAttribute::.ctor(string) = ( 01 00 1C 2E 4E 45 54 46 72 61 6D 65 77 6F 72 6B   // ....NETFramework
+                                                                                                        2C 56 65 72 73 69 6F 6E 3D 76 34 2E 35 2E 32 01   // ,Version=v4.5.2.
+                                                                                                        00 54 0E 14 46 72 61 6D 65 77 6F 72 6B 44 69 73   // .T..FrameworkDis
+                                                                                                        70 6C 61 79 4E 61 6D 65 14 2E 4E 45 54 20 46 72   // playName..NET Fr
+                                                                                                        61 6D 65 77 6F 72 6B 20 34 2E 35 2E 32 )          // amework 4.5.2
+  .hash algorithm 0x00008004
+  .ver 1:0:0:0
+}
+.mresource public ascii_art.Form1.resources
+{
+  // Offset: 0x00000000 Length: 0x000000B4
+  // WARNING: managed resource file ascii_art.Form1.resources created
+}
+.mresource public ascii_art.Properties.Resources.resources
+{
+  // Offset: 0x000000B8 Length: 0x000000B4
+  // WARNING: managed resource file ascii_art.Properties.Resources.resources created
+}
+.module ascii_art.exe
+// MVID: {0B9A6AE3-1616-4401-BA5E-81A0A950590D}
+.imagebase 0x00400000
+.file alignment 0x00000200
+.stackreserve 0x00100000
+.subsystem 0x0002       // WINDOWS_GUI
+.corflags 0x00020003    //  ILONLY 32BITPREFERRED
+// Image base: 0x02FE0000
+
+
+// =============== CLASS MEMBERS DECLARATION ===================
+
+.class public auto ansi beforefieldinit ascii_art.Form1
+       extends [System.Windows.Forms]System.Windows.Forms.Form
+{
+  .field private class [System.Drawing]System.Drawing.Bitmap bit
+  .field private string output
+  .field private string filename
+  .field private class [System]System.ComponentModel.IContainer components
+  .field private class [System.Windows.Forms]System.Windows.Forms.MenuStrip menuStrip1
+  .field private class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem
+  .field private class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem loadImageToolStripMenuItem
+  .field private class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem exportImageToolStripMenuItem
+  .field private class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem
+  .field private class [System.Windows.Forms]System.Windows.Forms.OpenFileDialog openFileDialog1
+  .field private class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem closeImageToolStripMenuItem
+  .field private class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem
+  .field private class [System.Windows.Forms]System.Windows.Forms.SaveFileDialog saveFileDialog1
+  .field private class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem
+  .field private class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1
+  .field private class [System.Windows.Forms]System.Windows.Forms.Label label1
+  .field private class [System.Windows.Forms]System.Windows.Forms.Label label2
+  .field private class [System.Windows.Forms]System.Windows.Forms.TextBox txtBxCharH
+  .field private class [System.Windows.Forms]System.Windows.Forms.TextBox txtBxCharW
+  .field private class [System.Windows.Forms]System.Windows.Forms.Label label3
+  .field private class [System.Windows.Forms]System.Windows.Forms.Label label4
+  .field private class [System.Windows.Forms]System.Windows.Forms.TextBox txtBxScale
+  .field private class [System.Windows.Forms]System.Windows.Forms.Label label5
+  .field private class [System.Windows.Forms]System.Windows.Forms.Button btnReset
+  .field private class [System.Windows.Forms]System.Windows.Forms.Button btnGenerate
+  .field private class [System.Windows.Forms]System.Windows.Forms.Button btnScaleShort
+  .field private class [System.Windows.Forms]System.Windows.Forms.Button btnOpen
+  .field private class [System.Windows.Forms]System.Windows.Forms.Button btnScaleLong
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Code size       30 (0x1e)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  ldnull
+    IL_0002:  stfld      class [System]System.ComponentModel.IContainer ascii_art.Form1::components
+    IL_0007:  ldarg.0
+    IL_0008:  call       instance void [System.Windows.Forms]System.Windows.Forms.Form::.ctor()
+    IL_000d:  nop
+    IL_000e:  nop
+    IL_000f:  ldarg.0
+    IL_0010:  call       instance void ascii_art.Form1::InitializeComponent()
+    IL_0015:  nop
+    IL_0016:  ldarg.0
+    IL_0017:  call       instance void ascii_art.Form1::ResetTextBoxes()
+    IL_001c:  nop
+    IL_001d:  ret
+  } // end of method Form1::.ctor
+
+  .method private hidebysig instance void 
+          ResetTextBoxes() cil managed
+  {
+    // Code size       43 (0x2b)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharH
+    IL_0007:  ldstr      "9"
+    IL_000c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0011:  nop
+    IL_0012:  ldarg.0
+    IL_0013:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharW
+    IL_0018:  ldstr      "5"
+    IL_001d:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0022:  nop
+    IL_0023:  ldarg.0
+    IL_0024:  call       instance void ascii_art.Form1::SetScaleShort()
+    IL_0029:  nop
+    IL_002a:  ret
+  } // end of method Form1::ResetTextBoxes
+
+  .method private hidebysig instance void 
+          SetScaleShort() cil managed
+  {
+    // Code size       19 (0x13)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxScale
+    IL_0007:  ldstr      "@%#*+=-:. "
+    IL_000c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0011:  nop
+    IL_0012:  ret
+  } // end of method Form1::SetScaleShort
+
+  .method private hidebysig instance void 
+          SetScaleLong() cil managed
+  {
+    // Code size       19 (0x13)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxScale
+    IL_0007:  ldstr      "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]"
+    + "\?-_+~<>i!lI;:,\" ^`'. "
+    IL_000c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0011:  nop
+    IL_0012:  ret
+  } // end of method Form1::SetScaleLong
+
+  .method private hidebysig instance void 
+          loadImageToolStripMenuItem_Click(object sender,
+                                           class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  call       instance void ascii_art.Form1::OpenImage()
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method Form1::loadImageToolStripMenuItem_Click
+
+  .method private hidebysig instance void 
+          OpenImage() cil managed
+  {
+    // Code size       159 (0x9f)
+    .maxstack  2
+    .locals init ([0] bool V_0,
+             [1] string ext,
+             [2] bool V_2)
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  ldfld      class [System.Windows.Forms]System.Windows.Forms.OpenFileDialog ascii_art.Form1::openFileDialog1
+    IL_0007:  ldstr      "Supported Files (*.bmp, *.jpg, *.png, *.tiff)|*.bm"
+    + "p;*.jpg;*.png;*.tiff"
+    IL_000c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.FileDialog::set_Filter(string)
+    IL_0011:  nop
+    IL_0012:  ldarg.0
+    IL_0013:  ldfld      class [System.Windows.Forms]System.Windows.Forms.OpenFileDialog ascii_art.Form1::openFileDialog1
+    IL_0018:  callvirt   instance valuetype [System.Windows.Forms]System.Windows.Forms.DialogResult [System.Windows.Forms]System.Windows.Forms.CommonDialog::ShowDialog()
+    IL_001d:  ldc.i4.1
+    IL_001e:  ceq
+    IL_0020:  stloc.0
+    IL_0021:  ldloc.0
+    IL_0022:  brfalse.s  IL_009e
+
+    IL_0024:  nop
+    IL_0025:  ldarg.0
+    IL_0026:  ldfld      class [System.Windows.Forms]System.Windows.Forms.OpenFileDialog ascii_art.Form1::openFileDialog1
+    IL_002b:  callvirt   instance string [System.Windows.Forms]System.Windows.Forms.FileDialog::get_FileName()
+    IL_0030:  call       string [mscorlib]System.IO.Path::GetExtension(string)
+    IL_0035:  stloc.1
+    IL_0036:  ldarg.0
+    IL_0037:  ldarg.0
+    IL_0038:  ldfld      class [System.Windows.Forms]System.Windows.Forms.OpenFileDialog ascii_art.Form1::openFileDialog1
+    IL_003d:  callvirt   instance string [System.Windows.Forms]System.Windows.Forms.FileDialog::get_FileName()
+    IL_0042:  call       string [mscorlib]System.IO.Path::GetFileNameWithoutExtension(string)
+    IL_0047:  stfld      string ascii_art.Form1::filename
+    IL_004c:  ldloc.1
+    IL_004d:  ldstr      ".bmp"
+    IL_0052:  call       bool [mscorlib]System.String::op_Equality(string,
+                                                                   string)
+    IL_0057:  brtrue.s   IL_0080
+
+    IL_0059:  ldloc.1
+    IL_005a:  ldstr      ".jpg"
+    IL_005f:  call       bool [mscorlib]System.String::op_Equality(string,
+                                                                   string)
+    IL_0064:  brtrue.s   IL_0080
+
+    IL_0066:  ldloc.1
+    IL_0067:  ldstr      ".png"
+    IL_006c:  call       bool [mscorlib]System.String::op_Equality(string,
+                                                                   string)
+    IL_0071:  brtrue.s   IL_0080
+
+    IL_0073:  ldloc.1
+    IL_0074:  ldstr      ".tiff"
+    IL_0079:  call       bool [mscorlib]System.String::op_Equality(string,
+                                                                   string)
+    IL_007e:  br.s       IL_0081
+
+    IL_0080:  ldc.i4.1
+    IL_0081:  stloc.2
+    IL_0082:  ldloc.2
+    IL_0083:  brfalse.s  IL_009d
+
+    IL_0085:  nop
+    IL_0086:  ldarg.0
+    IL_0087:  ldarg.0
+    IL_0088:  ldfld      class [System.Windows.Forms]System.Windows.Forms.OpenFileDialog ascii_art.Form1::openFileDialog1
+    IL_008d:  callvirt   instance string [System.Windows.Forms]System.Windows.Forms.FileDialog::get_FileName()
+    IL_0092:  newobj     instance void [System.Drawing]System.Drawing.Bitmap::.ctor(string)
+    IL_0097:  stfld      class [System.Drawing]System.Drawing.Bitmap ascii_art.Form1::bit
+    IL_009c:  nop
+    IL_009d:  nop
+    IL_009e:  ret
+  } // end of method Form1::OpenImage
+
+  .method private hidebysig instance bool 
+          bmpToText() cil managed
+  {
+    // Code size       468 (0x1d4)
+    .maxstack  4
+    .locals init ([0] int32 charH,
+             [1] int32 charW,
+             [2] string greyscale,
+             [3] bool V_3,
+             [4] bool V_4,
+             [5] bool V_5,
+             [6] int32 yo,
+             [7] bool V_7,
+             [8] int32 xo,
+             [9] bool V_9,
+             [10] int32 avgTotal,
+             [11] float64 scaleNumber,
+             [12] float64 avgFinal,
+             [13] float64 avgFinalPercent,
+             [14] int32 yi,
+             [15] int32 xi,
+             [16] int32 x,
+             [17] int32 y,
+             [18] valuetype [System.Drawing]System.Drawing.Color newColor,
+             [19] int32 avg,
+             [20] bool V_20,
+             [21] bool V_21,
+             [22] char V_22,
+             [23] bool V_23,
+             [24] bool V_24)
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharH
+    IL_0007:  callvirt   instance string [System.Windows.Forms]System.Windows.Forms.Control::get_Text()
+    IL_000c:  ldloca.s   charH
+    IL_000e:  call       bool [mscorlib]System.Int32::TryParse(string,
+                                                               int32&)
+    IL_0013:  ldc.i4.0
+    IL_0014:  ceq
+    IL_0016:  stloc.3
+    IL_0017:  ldloc.3
+    IL_0018:  brfalse.s  IL_002e
+
+    IL_001a:  nop
+    IL_001b:  ldstr      "The text boxes must contain numbers."
+    IL_0020:  call       valuetype [System.Windows.Forms]System.Windows.Forms.DialogResult [System.Windows.Forms]System.Windows.Forms.MessageBox::Show(string)
+    IL_0025:  pop
+    IL_0026:  ldc.i4.0
+    IL_0027:  stloc.s    V_4
+    IL_0029:  br         IL_01d1
+
+    IL_002e:  ldarg.0
+    IL_002f:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharW
+    IL_0034:  callvirt   instance string [System.Windows.Forms]System.Windows.Forms.Control::get_Text()
+    IL_0039:  ldloca.s   charW
+    IL_003b:  call       bool [mscorlib]System.Int32::TryParse(string,
+                                                               int32&)
+    IL_0040:  ldc.i4.0
+    IL_0041:  ceq
+    IL_0043:  stloc.s    V_5
+    IL_0045:  ldloc.s    V_5
+    IL_0047:  brfalse.s  IL_005d
+
+    IL_0049:  nop
+    IL_004a:  ldstr      "The text boxes must contain numbers."
+    IL_004f:  call       valuetype [System.Windows.Forms]System.Windows.Forms.DialogResult [System.Windows.Forms]System.Windows.Forms.MessageBox::Show(string)
+    IL_0054:  pop
+    IL_0055:  ldc.i4.0
+    IL_0056:  stloc.s    V_4
+    IL_0058:  br         IL_01d1
+
+    IL_005d:  ldarg.0
+    IL_005e:  ldstr      ""
+    IL_0063:  stfld      string ascii_art.Form1::output
+    IL_0068:  ldarg.0
+    IL_0069:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxScale
+    IL_006e:  callvirt   instance string [System.Windows.Forms]System.Windows.Forms.Control::get_Text()
+    IL_0073:  stloc.2
+    IL_0074:  ldc.i4.0
+    IL_0075:  stloc.s    yo
+    IL_0077:  br         IL_01b4
+
+    IL_007c:  nop
+    IL_007d:  ldloc.s    yo
+    IL_007f:  ldloc.0
+    IL_0080:  add
+    IL_0081:  ldarg.0
+    IL_0082:  ldfld      class [System.Drawing]System.Drawing.Bitmap ascii_art.Form1::bit
+    IL_0087:  callvirt   instance int32 [System.Drawing]System.Drawing.Image::get_Height()
+    IL_008c:  clt
+    IL_008e:  stloc.s    V_7
+    IL_0090:  ldloc.s    V_7
+    IL_0092:  brfalse    IL_01ad
+
+    IL_0097:  nop
+    IL_0098:  ldc.i4.0
+    IL_0099:  stloc.s    xo
+    IL_009b:  br         IL_017e
+
+    IL_00a0:  nop
+    IL_00a1:  ldloc.s    xo
+    IL_00a3:  ldloc.1
+    IL_00a4:  add
+    IL_00a5:  ldarg.0
+    IL_00a6:  ldfld      class [System.Drawing]System.Drawing.Bitmap ascii_art.Form1::bit
+    IL_00ab:  callvirt   instance int32 [System.Drawing]System.Drawing.Image::get_Width()
+    IL_00b0:  clt
+    IL_00b2:  stloc.s    V_9
+    IL_00b4:  ldloc.s    V_9
+    IL_00b6:  brfalse    IL_0177
+
+    IL_00bb:  nop
+    IL_00bc:  ldc.i4.0
+    IL_00bd:  stloc.s    avgTotal
+    IL_00bf:  ldc.i4.0
+    IL_00c0:  stloc.s    yi
+    IL_00c2:  br.s       IL_0125
+
+    IL_00c4:  nop
+    IL_00c5:  ldc.i4.0
+    IL_00c6:  stloc.s    xi
+    IL_00c8:  br.s       IL_0113
+
+    IL_00ca:  nop
+    IL_00cb:  ldloc.s    xi
+    IL_00cd:  ldloc.s    xo
+    IL_00cf:  add
+    IL_00d0:  stloc.s    x
+    IL_00d2:  ldloc.s    yi
+    IL_00d4:  ldloc.s    yo
+    IL_00d6:  add
+    IL_00d7:  stloc.s    y
+    IL_00d9:  ldarg.0
+    IL_00da:  ldfld      class [System.Drawing]System.Drawing.Bitmap ascii_art.Form1::bit
+    IL_00df:  ldloc.s    x
+    IL_00e1:  ldloc.s    y
+    IL_00e3:  callvirt   instance valuetype [System.Drawing]System.Drawing.Color [System.Drawing]System.Drawing.Bitmap::GetPixel(int32,
+                                                                                                                                 int32)
+    IL_00e8:  stloc.s    newColor
+    IL_00ea:  ldloca.s   newColor
+    IL_00ec:  call       instance uint8 [System.Drawing]System.Drawing.Color::get_R()
+    IL_00f1:  ldloca.s   newColor
+    IL_00f3:  call       instance uint8 [System.Drawing]System.Drawing.Color::get_G()
+    IL_00f8:  add
+    IL_00f9:  ldloca.s   newColor
+    IL_00fb:  call       instance uint8 [System.Drawing]System.Drawing.Color::get_B()
+    IL_0100:  add
+    IL_0101:  ldc.i4.3
+    IL_0102:  div
+    IL_0103:  stloc.s    avg
+    IL_0105:  ldloc.s    avgTotal
+    IL_0107:  ldloc.s    avg
+    IL_0109:  add
+    IL_010a:  stloc.s    avgTotal
+    IL_010c:  nop
+    IL_010d:  ldloc.s    xi
+    IL_010f:  ldc.i4.1
+    IL_0110:  add
+    IL_0111:  stloc.s    xi
+    IL_0113:  ldloc.s    xi
+    IL_0115:  ldloc.1
+    IL_0116:  clt
+    IL_0118:  stloc.s    V_20
+    IL_011a:  ldloc.s    V_20
+    IL_011c:  brtrue.s   IL_00ca
+
+    IL_011e:  nop
+    IL_011f:  ldloc.s    yi
+    IL_0121:  ldc.i4.1
+    IL_0122:  add
+    IL_0123:  stloc.s    yi
+    IL_0125:  ldloc.s    yi
+    IL_0127:  ldloc.0
+    IL_0128:  clt
+    IL_012a:  stloc.s    V_21
+    IL_012c:  ldloc.s    V_21
+    IL_012e:  brtrue.s   IL_00c4
+
+    IL_0130:  ldloc.s    avgTotal
+    IL_0132:  ldloc.0
+    IL_0133:  ldloc.1
+    IL_0134:  mul
+    IL_0135:  div
+    IL_0136:  conv.r8
+    IL_0137:  stloc.s    avgFinal
+    IL_0139:  ldloc.s    avgFinal
+    IL_013b:  ldc.r8     255.
+    IL_0144:  div
+    IL_0145:  stloc.s    avgFinalPercent
+    IL_0147:  ldloc.s    avgFinalPercent
+    IL_0149:  ldloc.2
+    IL_014a:  callvirt   instance int32 [mscorlib]System.String::get_Length()
+    IL_014f:  conv.r8
+    IL_0150:  mul
+    IL_0151:  stloc.s    scaleNumber
+    IL_0153:  ldarg.0
+    IL_0154:  ldarg.0
+    IL_0155:  ldfld      string ascii_art.Form1::output
+    IL_015a:  ldloc.2
+    IL_015b:  ldloc.s    scaleNumber
+    IL_015d:  conv.i4
+    IL_015e:  callvirt   instance char [mscorlib]System.String::get_Chars(int32)
+    IL_0163:  stloc.s    V_22
+    IL_0165:  ldloca.s   V_22
+    IL_0167:  call       instance string [mscorlib]System.Char::ToString()
+    IL_016c:  call       string [mscorlib]System.String::Concat(string,
+                                                                string)
+    IL_0171:  stfld      string ascii_art.Form1::output
+    IL_0176:  nop
+    IL_0177:  nop
+    IL_0178:  ldloc.s    xo
+    IL_017a:  ldloc.1
+    IL_017b:  add
+    IL_017c:  stloc.s    xo
+    IL_017e:  ldloc.s    xo
+    IL_0180:  ldarg.0
+    IL_0181:  ldfld      class [System.Drawing]System.Drawing.Bitmap ascii_art.Form1::bit
+    IL_0186:  callvirt   instance int32 [System.Drawing]System.Drawing.Image::get_Width()
+    IL_018b:  clt
+    IL_018d:  stloc.s    V_23
+    IL_018f:  ldloc.s    V_23
+    IL_0191:  brtrue     IL_00a0
+
+    IL_0196:  ldarg.0
+    IL_0197:  ldarg.0
+    IL_0198:  ldfld      string ascii_art.Form1::output
+    IL_019d:  ldstr      "\r\n"
+    IL_01a2:  call       string [mscorlib]System.String::Concat(string,
+                                                                string)
+    IL_01a7:  stfld      string ascii_art.Form1::output
+    IL_01ac:  nop
+    IL_01ad:  nop
+    IL_01ae:  ldloc.s    yo
+    IL_01b0:  ldloc.0
+    IL_01b1:  add
+    IL_01b2:  stloc.s    yo
+    IL_01b4:  ldloc.s    yo
+    IL_01b6:  ldarg.0
+    IL_01b7:  ldfld      class [System.Drawing]System.Drawing.Bitmap ascii_art.Form1::bit
+    IL_01bc:  callvirt   instance int32 [System.Drawing]System.Drawing.Image::get_Height()
+    IL_01c1:  clt
+    IL_01c3:  stloc.s    V_24
+    IL_01c5:  ldloc.s    V_24
+    IL_01c7:  brtrue     IL_007c
+
+    IL_01cc:  ldc.i4.1
+    IL_01cd:  stloc.s    V_4
+    IL_01cf:  br.s       IL_01d1
+
+    IL_01d1:  ldloc.s    V_4
+    IL_01d3:  ret
+  } // end of method Form1::bmpToText
+
+  .method private hidebysig instance void 
+          exitToolStripMenuItem_Click(object sender,
+                                      class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  call       instance void [System.Windows.Forms]System.Windows.Forms.Form::Close()
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method Form1::exitToolStripMenuItem_Click
+
+  .method private hidebysig instance void 
+          testToolStripMenuItem_Click(object sender,
+                                      class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       2 (0x2)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ret
+  } // end of method Form1::testToolStripMenuItem_Click
+
+  .method private hidebysig instance void 
+          closeImageToolStripMenuItem_Click(object sender,
+                                            class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       2 (0x2)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ret
+  } // end of method Form1::closeImageToolStripMenuItem_Click
+
+  .method private hidebysig instance void 
+          exportImageToolStripMenuItem_Click(object sender,
+                                             class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  call       instance void ascii_art.Form1::ExportAscii()
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method Form1::exportImageToolStripMenuItem_Click
+
+  .method private hidebysig instance void 
+          ExportAscii() cil managed
+  {
+    // Code size       148 (0x94)
+    .maxstack  3
+    .locals init ([0] class [mscorlib]System.IO.Stream 'stream',
+             [1] bool V_1,
+             [2] bool V_2,
+             [3] class [mscorlib]System.IO.StreamWriter sw,
+             [4] bool V_4)
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  ldfld      class [System.Windows.Forms]System.Windows.Forms.SaveFileDialog ascii_art.Form1::saveFileDialog1
+    IL_0007:  ldstr      "txt files (*.txt)|*.txt|All files (*.*)|*.*"
+    IL_000c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.FileDialog::set_Filter(string)
+    IL_0011:  nop
+    IL_0012:  ldarg.0
+    IL_0013:  ldfld      class [System.Windows.Forms]System.Windows.Forms.SaveFileDialog ascii_art.Form1::saveFileDialog1
+    IL_0018:  ldarg.0
+    IL_0019:  ldfld      string ascii_art.Form1::filename
+    IL_001e:  ldstr      ".txt"
+    IL_0023:  call       string [mscorlib]System.String::Concat(string,
+                                                                string)
+    IL_0028:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.FileDialog::set_FileName(string)
+    IL_002d:  nop
+    IL_002e:  ldarg.0
+    IL_002f:  ldfld      class [System.Windows.Forms]System.Windows.Forms.SaveFileDialog ascii_art.Form1::saveFileDialog1
+    IL_0034:  callvirt   instance valuetype [System.Windows.Forms]System.Windows.Forms.DialogResult [System.Windows.Forms]System.Windows.Forms.CommonDialog::ShowDialog()
+    IL_0039:  ldc.i4.1
+    IL_003a:  ceq
+    IL_003c:  stloc.1
+    IL_003d:  ldloc.1
+    IL_003e:  brfalse.s  IL_0088
+
+    IL_0040:  nop
+    IL_0041:  ldarg.0
+    IL_0042:  ldfld      class [System.Windows.Forms]System.Windows.Forms.SaveFileDialog ascii_art.Form1::saveFileDialog1
+    IL_0047:  callvirt   instance class [mscorlib]System.IO.Stream [System.Windows.Forms]System.Windows.Forms.SaveFileDialog::OpenFile()
+    IL_004c:  dup
+    IL_004d:  stloc.0
+    IL_004e:  ldnull
+    IL_004f:  cgt.un
+    IL_0051:  stloc.2
+    IL_0052:  ldloc.2
+    IL_0053:  brfalse.s  IL_0087
+
+    IL_0055:  nop
+    IL_0056:  ldarg.0
+    IL_0057:  call       instance bool ascii_art.Form1::bmpToText()
+    IL_005c:  stloc.s    V_4
+    IL_005e:  ldloc.s    V_4
+    IL_0060:  brfalse.s  IL_007f
+
+    IL_0062:  nop
+    IL_0063:  ldloc.0
+    IL_0064:  newobj     instance void [mscorlib]System.IO.StreamWriter::.ctor(class [mscorlib]System.IO.Stream)
+    IL_0069:  stloc.3
+    IL_006a:  ldloc.3
+    IL_006b:  ldarg.0
+    IL_006c:  ldfld      string ascii_art.Form1::output
+    IL_0071:  callvirt   instance void [mscorlib]System.IO.TextWriter::WriteLine(string)
+    IL_0076:  nop
+    IL_0077:  ldloc.3
+    IL_0078:  callvirt   instance void [mscorlib]System.IO.TextWriter::Close()
+    IL_007d:  nop
+    IL_007e:  nop
+    IL_007f:  ldloc.0
+    IL_0080:  callvirt   instance void [mscorlib]System.IO.Stream::Close()
+    IL_0085:  nop
+    IL_0086:  nop
+    IL_0087:  nop
+    IL_0088:  ldstr      "Successfully Exported!"
+    IL_008d:  call       valuetype [System.Windows.Forms]System.Windows.Forms.DialogResult [System.Windows.Forms]System.Windows.Forms.MessageBox::Show(string)
+    IL_0092:  pop
+    IL_0093:  ret
+  } // end of method Form1::ExportAscii
+
+  .method private hidebysig instance void 
+          label4_Click(object sender,
+                       class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       2 (0x2)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ret
+  } // end of method Form1::label4_Click
+
+  .method private hidebysig instance void 
+          btnOpen_Click(object sender,
+                        class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  call       instance void ascii_art.Form1::OpenImage()
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method Form1::btnOpen_Click
+
+  .method private hidebysig instance void 
+          button2_Click(object sender,
+                        class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  call       instance void ascii_art.Form1::ExportAscii()
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method Form1::button2_Click
+
+  .method private hidebysig instance void 
+          btnReset_Click(object sender,
+                         class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  call       instance void ascii_art.Form1::ResetTextBoxes()
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method Form1::btnReset_Click
+
+  .method private hidebysig instance void 
+          btnScaleShort_Click(object sender,
+                              class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  call       instance void ascii_art.Form1::SetScaleShort()
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method Form1::btnScaleShort_Click
+
+  .method private hidebysig instance void 
+          btnScaleLong_Click(object sender,
+                             class [mscorlib]System.EventArgs e) cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  call       instance void ascii_art.Form1::SetScaleLong()
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method Form1::btnScaleLong_Click
+
+  .method family hidebysig virtual instance void 
+          Dispose(bool disposing) cil managed
+  {
+    // Code size       43 (0x2b)
+    .maxstack  2
+    .locals init ([0] bool V_0)
+    IL_0000:  nop
+    IL_0001:  ldarg.1
+    IL_0002:  brfalse.s  IL_000f
+
+    IL_0004:  ldarg.0
+    IL_0005:  ldfld      class [System]System.ComponentModel.IContainer ascii_art.Form1::components
+    IL_000a:  ldnull
+    IL_000b:  cgt.un
+    IL_000d:  br.s       IL_0010
+
+    IL_000f:  ldc.i4.0
+    IL_0010:  stloc.0
+    IL_0011:  ldloc.0
+    IL_0012:  brfalse.s  IL_0022
+
+    IL_0014:  nop
+    IL_0015:  ldarg.0
+    IL_0016:  ldfld      class [System]System.ComponentModel.IContainer ascii_art.Form1::components
+    IL_001b:  callvirt   instance void [mscorlib]System.IDisposable::Dispose()
+    IL_0020:  nop
+    IL_0021:  nop
+    IL_0022:  ldarg.0
+    IL_0023:  ldarg.1
+    IL_0024:  call       instance void [System.Windows.Forms]System.Windows.Forms.Form::Dispose(bool)
+    IL_0029:  nop
+    IL_002a:  ret
+  } // end of method Form1::Dispose
+
+  .method private hidebysig instance void 
+          InitializeComponent() cil managed
+  {
+    // Code size       2951 (0xb87)
+    .maxstack  6
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.MenuStrip::.ctor()
+    IL_0007:  stfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_000c:  ldarg.0
+    IL_000d:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem::.ctor()
+    IL_0012:  stfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::fileToolStripMenuItem
+    IL_0017:  ldarg.0
+    IL_0018:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem::.ctor()
+    IL_001d:  stfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::loadImageToolStripMenuItem
+    IL_0022:  ldarg.0
+    IL_0023:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem::.ctor()
+    IL_0028:  stfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exportImageToolStripMenuItem
+    IL_002d:  ldarg.0
+    IL_002e:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem::.ctor()
+    IL_0033:  stfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::closeImageToolStripMenuItem
+    IL_0038:  ldarg.0
+    IL_0039:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem::.ctor()
+    IL_003e:  stfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exitToolStripMenuItem
+    IL_0043:  ldarg.0
+    IL_0044:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem::.ctor()
+    IL_0049:  stfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem
+    IL_004e:  ldarg.0
+    IL_004f:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem::.ctor()
+    IL_0054:  stfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::helpToolStripMenuItem
+    IL_0059:  ldarg.0
+    IL_005a:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem::.ctor()
+    IL_005f:  stfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem1
+    IL_0064:  ldarg.0
+    IL_0065:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.OpenFileDialog::.ctor()
+    IL_006a:  stfld      class [System.Windows.Forms]System.Windows.Forms.OpenFileDialog ascii_art.Form1::openFileDialog1
+    IL_006f:  ldarg.0
+    IL_0070:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.SaveFileDialog::.ctor()
+    IL_0075:  stfld      class [System.Windows.Forms]System.Windows.Forms.SaveFileDialog ascii_art.Form1::saveFileDialog1
+    IL_007a:  ldarg.0
+    IL_007b:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.Label::.ctor()
+    IL_0080:  stfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label1
+    IL_0085:  ldarg.0
+    IL_0086:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.Label::.ctor()
+    IL_008b:  stfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label2
+    IL_0090:  ldarg.0
+    IL_0091:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.TextBox::.ctor()
+    IL_0096:  stfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharH
+    IL_009b:  ldarg.0
+    IL_009c:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.TextBox::.ctor()
+    IL_00a1:  stfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharW
+    IL_00a6:  ldarg.0
+    IL_00a7:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.Label::.ctor()
+    IL_00ac:  stfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label3
+    IL_00b1:  ldarg.0
+    IL_00b2:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.Label::.ctor()
+    IL_00b7:  stfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label4
+    IL_00bc:  ldarg.0
+    IL_00bd:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.TextBox::.ctor()
+    IL_00c2:  stfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxScale
+    IL_00c7:  ldarg.0
+    IL_00c8:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.Label::.ctor()
+    IL_00cd:  stfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label5
+    IL_00d2:  ldarg.0
+    IL_00d3:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.Button::.ctor()
+    IL_00d8:  stfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnReset
+    IL_00dd:  ldarg.0
+    IL_00de:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.Button::.ctor()
+    IL_00e3:  stfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnGenerate
+    IL_00e8:  ldarg.0
+    IL_00e9:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.Button::.ctor()
+    IL_00ee:  stfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleShort
+    IL_00f3:  ldarg.0
+    IL_00f4:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.Button::.ctor()
+    IL_00f9:  stfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnOpen
+    IL_00fe:  ldarg.0
+    IL_00ff:  newobj     instance void [System.Windows.Forms]System.Windows.Forms.Button::.ctor()
+    IL_0104:  stfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleLong
+    IL_0109:  ldarg.0
+    IL_010a:  ldfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_010f:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::SuspendLayout()
+    IL_0114:  nop
+    IL_0115:  ldarg.0
+    IL_0116:  call       instance void [System.Windows.Forms]System.Windows.Forms.Control::SuspendLayout()
+    IL_011b:  nop
+    IL_011c:  ldarg.0
+    IL_011d:  ldfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_0122:  callvirt   instance class [System.Windows.Forms]System.Windows.Forms.ToolStripItemCollection [System.Windows.Forms]System.Windows.Forms.ToolStrip::get_Items()
+    IL_0127:  ldc.i4.2
+    IL_0128:  newarr     [System.Windows.Forms]System.Windows.Forms.ToolStripItem
+    IL_012d:  dup
+    IL_012e:  ldc.i4.0
+    IL_012f:  ldarg.0
+    IL_0130:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::fileToolStripMenuItem
+    IL_0135:  stelem.ref
+    IL_0136:  dup
+    IL_0137:  ldc.i4.1
+    IL_0138:  ldarg.0
+    IL_0139:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem
+    IL_013e:  stelem.ref
+    IL_013f:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItemCollection::AddRange(class [System.Windows.Forms]System.Windows.Forms.ToolStripItem[])
+    IL_0144:  nop
+    IL_0145:  ldarg.0
+    IL_0146:  ldfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_014b:  ldc.i4.0
+    IL_014c:  ldc.i4.0
+    IL_014d:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_0152:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_0157:  nop
+    IL_0158:  ldarg.0
+    IL_0159:  ldfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_015e:  ldstr      "menuStrip1"
+    IL_0163:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_0168:  nop
+    IL_0169:  ldarg.0
+    IL_016a:  ldfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_016f:  ldc.i4     0x19b
+    IL_0174:  ldc.i4.s   24
+    IL_0176:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_017b:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_0180:  nop
+    IL_0181:  ldarg.0
+    IL_0182:  ldfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_0187:  ldc.i4.0
+    IL_0188:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_018d:  nop
+    IL_018e:  ldarg.0
+    IL_018f:  ldfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_0194:  ldstr      "menuStrip1"
+    IL_0199:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_019e:  nop
+    IL_019f:  ldarg.0
+    IL_01a0:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::fileToolStripMenuItem
+    IL_01a5:  callvirt   instance class [System.Windows.Forms]System.Windows.Forms.ToolStripItemCollection [System.Windows.Forms]System.Windows.Forms.ToolStripDropDownItem::get_DropDownItems()
+    IL_01aa:  ldc.i4.4
+    IL_01ab:  newarr     [System.Windows.Forms]System.Windows.Forms.ToolStripItem
+    IL_01b0:  dup
+    IL_01b1:  ldc.i4.0
+    IL_01b2:  ldarg.0
+    IL_01b3:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::loadImageToolStripMenuItem
+    IL_01b8:  stelem.ref
+    IL_01b9:  dup
+    IL_01ba:  ldc.i4.1
+    IL_01bb:  ldarg.0
+    IL_01bc:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exportImageToolStripMenuItem
+    IL_01c1:  stelem.ref
+    IL_01c2:  dup
+    IL_01c3:  ldc.i4.2
+    IL_01c4:  ldarg.0
+    IL_01c5:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::closeImageToolStripMenuItem
+    IL_01ca:  stelem.ref
+    IL_01cb:  dup
+    IL_01cc:  ldc.i4.3
+    IL_01cd:  ldarg.0
+    IL_01ce:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exitToolStripMenuItem
+    IL_01d3:  stelem.ref
+    IL_01d4:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItemCollection::AddRange(class [System.Windows.Forms]System.Windows.Forms.ToolStripItem[])
+    IL_01d9:  nop
+    IL_01da:  ldarg.0
+    IL_01db:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::fileToolStripMenuItem
+    IL_01e0:  ldstr      "fileToolStripMenuItem"
+    IL_01e5:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Name(string)
+    IL_01ea:  nop
+    IL_01eb:  ldarg.0
+    IL_01ec:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::fileToolStripMenuItem
+    IL_01f1:  ldc.i4.s   37
+    IL_01f3:  ldc.i4.s   20
+    IL_01f5:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_01fa:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_01ff:  nop
+    IL_0200:  ldarg.0
+    IL_0201:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::fileToolStripMenuItem
+    IL_0206:  ldstr      "&File"
+    IL_020b:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Text(string)
+    IL_0210:  nop
+    IL_0211:  ldarg.0
+    IL_0212:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::loadImageToolStripMenuItem
+    IL_0217:  ldstr      "loadImageToolStripMenuItem"
+    IL_021c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Name(string)
+    IL_0221:  nop
+    IL_0222:  ldarg.0
+    IL_0223:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::loadImageToolStripMenuItem
+    IL_0228:  ldc.i4     0x98
+    IL_022d:  ldc.i4.s   22
+    IL_022f:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0234:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_0239:  nop
+    IL_023a:  ldarg.0
+    IL_023b:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::loadImageToolStripMenuItem
+    IL_0240:  ldstr      "&Load Image"
+    IL_0245:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Text(string)
+    IL_024a:  nop
+    IL_024b:  ldarg.0
+    IL_024c:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::loadImageToolStripMenuItem
+    IL_0251:  ldarg.0
+    IL_0252:  ldftn      instance void ascii_art.Form1::loadImageToolStripMenuItem_Click(object,
+                                                                                         class [mscorlib]System.EventArgs)
+    IL_0258:  newobj     instance void [mscorlib]System.EventHandler::.ctor(object,
+                                                                            native int)
+    IL_025d:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::add_Click(class [mscorlib]System.EventHandler)
+    IL_0262:  nop
+    IL_0263:  ldarg.0
+    IL_0264:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exportImageToolStripMenuItem
+    IL_0269:  ldstr      "exportImageToolStripMenuItem"
+    IL_026e:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Name(string)
+    IL_0273:  nop
+    IL_0274:  ldarg.0
+    IL_0275:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exportImageToolStripMenuItem
+    IL_027a:  ldc.i4     0x98
+    IL_027f:  ldc.i4.s   22
+    IL_0281:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0286:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_028b:  nop
+    IL_028c:  ldarg.0
+    IL_028d:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exportImageToolStripMenuItem
+    IL_0292:  ldstr      "&Export Image"
+    IL_0297:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Text(string)
+    IL_029c:  nop
+    IL_029d:  ldarg.0
+    IL_029e:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exportImageToolStripMenuItem
+    IL_02a3:  ldarg.0
+    IL_02a4:  ldftn      instance void ascii_art.Form1::exportImageToolStripMenuItem_Click(object,
+                                                                                           class [mscorlib]System.EventArgs)
+    IL_02aa:  newobj     instance void [mscorlib]System.EventHandler::.ctor(object,
+                                                                            native int)
+    IL_02af:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::add_Click(class [mscorlib]System.EventHandler)
+    IL_02b4:  nop
+    IL_02b5:  ldarg.0
+    IL_02b6:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::closeImageToolStripMenuItem
+    IL_02bb:  ldstr      "closeImageToolStripMenuItem"
+    IL_02c0:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Name(string)
+    IL_02c5:  nop
+    IL_02c6:  ldarg.0
+    IL_02c7:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::closeImageToolStripMenuItem
+    IL_02cc:  ldc.i4     0x98
+    IL_02d1:  ldc.i4.s   22
+    IL_02d3:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_02d8:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_02dd:  nop
+    IL_02de:  ldarg.0
+    IL_02df:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::closeImageToolStripMenuItem
+    IL_02e4:  ldstr      "&Close Image"
+    IL_02e9:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Text(string)
+    IL_02ee:  nop
+    IL_02ef:  ldarg.0
+    IL_02f0:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::closeImageToolStripMenuItem
+    IL_02f5:  ldarg.0
+    IL_02f6:  ldftn      instance void ascii_art.Form1::closeImageToolStripMenuItem_Click(object,
+                                                                                          class [mscorlib]System.EventArgs)
+    IL_02fc:  newobj     instance void [mscorlib]System.EventHandler::.ctor(object,
+                                                                            native int)
+    IL_0301:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::add_Click(class [mscorlib]System.EventHandler)
+    IL_0306:  nop
+    IL_0307:  ldarg.0
+    IL_0308:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exitToolStripMenuItem
+    IL_030d:  ldstr      "exitToolStripMenuItem"
+    IL_0312:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Name(string)
+    IL_0317:  nop
+    IL_0318:  ldarg.0
+    IL_0319:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exitToolStripMenuItem
+    IL_031e:  ldc.i4     0x98
+    IL_0323:  ldc.i4.s   22
+    IL_0325:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_032a:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_032f:  nop
+    IL_0330:  ldarg.0
+    IL_0331:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exitToolStripMenuItem
+    IL_0336:  ldstr      "E&xit"
+    IL_033b:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Text(string)
+    IL_0340:  nop
+    IL_0341:  ldarg.0
+    IL_0342:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::exitToolStripMenuItem
+    IL_0347:  ldarg.0
+    IL_0348:  ldftn      instance void ascii_art.Form1::exitToolStripMenuItem_Click(object,
+                                                                                    class [mscorlib]System.EventArgs)
+    IL_034e:  newobj     instance void [mscorlib]System.EventHandler::.ctor(object,
+                                                                            native int)
+    IL_0353:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::add_Click(class [mscorlib]System.EventHandler)
+    IL_0358:  nop
+    IL_0359:  ldarg.0
+    IL_035a:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem
+    IL_035f:  callvirt   instance class [System.Windows.Forms]System.Windows.Forms.ToolStripItemCollection [System.Windows.Forms]System.Windows.Forms.ToolStripDropDownItem::get_DropDownItems()
+    IL_0364:  ldc.i4.2
+    IL_0365:  newarr     [System.Windows.Forms]System.Windows.Forms.ToolStripItem
+    IL_036a:  dup
+    IL_036b:  ldc.i4.0
+    IL_036c:  ldarg.0
+    IL_036d:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::helpToolStripMenuItem
+    IL_0372:  stelem.ref
+    IL_0373:  dup
+    IL_0374:  ldc.i4.1
+    IL_0375:  ldarg.0
+    IL_0376:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem1
+    IL_037b:  stelem.ref
+    IL_037c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItemCollection::AddRange(class [System.Windows.Forms]System.Windows.Forms.ToolStripItem[])
+    IL_0381:  nop
+    IL_0382:  ldarg.0
+    IL_0383:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem
+    IL_0388:  ldstr      "aboutToolStripMenuItem"
+    IL_038d:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Name(string)
+    IL_0392:  nop
+    IL_0393:  ldarg.0
+    IL_0394:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem
+    IL_0399:  ldc.i4.s   52
+    IL_039b:  ldc.i4.s   20
+    IL_039d:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_03a2:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_03a7:  nop
+    IL_03a8:  ldarg.0
+    IL_03a9:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem
+    IL_03ae:  ldstr      "About"
+    IL_03b3:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Text(string)
+    IL_03b8:  nop
+    IL_03b9:  ldarg.0
+    IL_03ba:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::helpToolStripMenuItem
+    IL_03bf:  ldstr      "helpToolStripMenuItem"
+    IL_03c4:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Name(string)
+    IL_03c9:  nop
+    IL_03ca:  ldarg.0
+    IL_03cb:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::helpToolStripMenuItem
+    IL_03d0:  ldc.i4.s   107
+    IL_03d2:  ldc.i4.s   22
+    IL_03d4:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_03d9:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_03de:  nop
+    IL_03df:  ldarg.0
+    IL_03e0:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::helpToolStripMenuItem
+    IL_03e5:  ldstr      "&Help"
+    IL_03ea:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Text(string)
+    IL_03ef:  nop
+    IL_03f0:  ldarg.0
+    IL_03f1:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem1
+    IL_03f6:  ldstr      "aboutToolStripMenuItem1"
+    IL_03fb:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Name(string)
+    IL_0400:  nop
+    IL_0401:  ldarg.0
+    IL_0402:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem1
+    IL_0407:  ldc.i4.s   107
+    IL_0409:  ldc.i4.s   22
+    IL_040b:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0410:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_0415:  nop
+    IL_0416:  ldarg.0
+    IL_0417:  ldfld      class [System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem ascii_art.Form1::aboutToolStripMenuItem1
+    IL_041c:  ldstr      "&About"
+    IL_0421:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ToolStripItem::set_Text(string)
+    IL_0426:  nop
+    IL_0427:  ldarg.0
+    IL_0428:  ldfld      class [System.Windows.Forms]System.Windows.Forms.OpenFileDialog ascii_art.Form1::openFileDialog1
+    IL_042d:  ldstr      "openFileDialog1"
+    IL_0432:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.FileDialog::set_FileName(string)
+    IL_0437:  nop
+    IL_0438:  ldarg.0
+    IL_0439:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label1
+    IL_043e:  ldc.i4.1
+    IL_043f:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_AutoSize(bool)
+    IL_0444:  nop
+    IL_0445:  ldarg.0
+    IL_0446:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label1
+    IL_044b:  ldstr      "Microsoft Sans Serif"
+    IL_0450:  ldc.r4     9.
+    IL_0455:  ldc.i4.0
+    IL_0456:  ldc.i4.3
+    IL_0457:  ldc.i4.0
+    IL_0458:  newobj     instance void [System.Drawing]System.Drawing.Font::.ctor(string,
+                                                                                  float32,
+                                                                                  valuetype [System.Drawing]System.Drawing.FontStyle,
+                                                                                  valuetype [System.Drawing]System.Drawing.GraphicsUnit,
+                                                                                  uint8)
+    IL_045d:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Font(class [System.Drawing]System.Drawing.Font)
+    IL_0462:  nop
+    IL_0463:  ldarg.0
+    IL_0464:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label1
+    IL_0469:  ldc.i4.s   12
+    IL_046b:  ldc.i4.s   28
+    IL_046d:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_0472:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_0477:  nop
+    IL_0478:  ldarg.0
+    IL_0479:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label1
+    IL_047e:  ldstr      "label1"
+    IL_0483:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_0488:  nop
+    IL_0489:  ldarg.0
+    IL_048a:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label1
+    IL_048f:  ldc.i4.s   80
+    IL_0491:  ldc.i4.s   15
+    IL_0493:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0498:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_049d:  nop
+    IL_049e:  ldarg.0
+    IL_049f:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label1
+    IL_04a4:  ldc.i4.1
+    IL_04a5:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_04aa:  nop
+    IL_04ab:  ldarg.0
+    IL_04ac:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label1
+    IL_04b1:  ldstr      "Letter Height:"
+    IL_04b6:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_04bb:  nop
+    IL_04bc:  ldarg.0
+    IL_04bd:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label2
+    IL_04c2:  ldc.i4.1
+    IL_04c3:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_AutoSize(bool)
+    IL_04c8:  nop
+    IL_04c9:  ldarg.0
+    IL_04ca:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label2
+    IL_04cf:  ldstr      "Microsoft Sans Serif"
+    IL_04d4:  ldc.r4     9.
+    IL_04d9:  ldc.i4.0
+    IL_04da:  ldc.i4.3
+    IL_04db:  ldc.i4.0
+    IL_04dc:  newobj     instance void [System.Drawing]System.Drawing.Font::.ctor(string,
+                                                                                  float32,
+                                                                                  valuetype [System.Drawing]System.Drawing.FontStyle,
+                                                                                  valuetype [System.Drawing]System.Drawing.GraphicsUnit,
+                                                                                  uint8)
+    IL_04e1:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Font(class [System.Drawing]System.Drawing.Font)
+    IL_04e6:  nop
+    IL_04e7:  ldarg.0
+    IL_04e8:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label2
+    IL_04ed:  ldc.i4     0xd4
+    IL_04f2:  ldc.i4.s   28
+    IL_04f4:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_04f9:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_04fe:  nop
+    IL_04ff:  ldarg.0
+    IL_0500:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label2
+    IL_0505:  ldstr      "label2"
+    IL_050a:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_050f:  nop
+    IL_0510:  ldarg.0
+    IL_0511:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label2
+    IL_0516:  ldc.i4.s   75
+    IL_0518:  ldc.i4.s   15
+    IL_051a:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_051f:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_0524:  nop
+    IL_0525:  ldarg.0
+    IL_0526:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label2
+    IL_052b:  ldc.i4.1
+    IL_052c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_0531:  nop
+    IL_0532:  ldarg.0
+    IL_0533:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label2
+    IL_0538:  ldstr      "Letter Width:"
+    IL_053d:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0542:  nop
+    IL_0543:  ldarg.0
+    IL_0544:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharH
+    IL_0549:  ldc.i4.s   98
+    IL_054b:  ldc.i4.s   27
+    IL_054d:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_0552:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_0557:  nop
+    IL_0558:  ldarg.0
+    IL_0559:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharH
+    IL_055e:  ldstr      "txtBxCharH"
+    IL_0563:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_0568:  nop
+    IL_0569:  ldarg.0
+    IL_056a:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharH
+    IL_056f:  ldc.i4.s   31
+    IL_0571:  ldc.i4.s   20
+    IL_0573:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0578:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_057d:  nop
+    IL_057e:  ldarg.0
+    IL_057f:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharH
+    IL_0584:  ldc.i4.2
+    IL_0585:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_058a:  nop
+    IL_058b:  ldarg.0
+    IL_058c:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharW
+    IL_0591:  ldc.i4     0x125
+    IL_0596:  ldc.i4.s   27
+    IL_0598:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_059d:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_05a2:  nop
+    IL_05a3:  ldarg.0
+    IL_05a4:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharW
+    IL_05a9:  ldstr      "txtBxCharW"
+    IL_05ae:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_05b3:  nop
+    IL_05b4:  ldarg.0
+    IL_05b5:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharW
+    IL_05ba:  ldc.i4.s   31
+    IL_05bc:  ldc.i4.s   20
+    IL_05be:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_05c3:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_05c8:  nop
+    IL_05c9:  ldarg.0
+    IL_05ca:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharW
+    IL_05cf:  ldc.i4.2
+    IL_05d0:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_05d5:  nop
+    IL_05d6:  ldarg.0
+    IL_05d7:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label3
+    IL_05dc:  ldc.i4.1
+    IL_05dd:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_AutoSize(bool)
+    IL_05e2:  nop
+    IL_05e3:  ldarg.0
+    IL_05e4:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label3
+    IL_05e9:  ldstr      "Microsoft Sans Serif"
+    IL_05ee:  ldc.r4     9.
+    IL_05f3:  ldc.i4.0
+    IL_05f4:  ldc.i4.3
+    IL_05f5:  ldc.i4.0
+    IL_05f6:  newobj     instance void [System.Drawing]System.Drawing.Font::.ctor(string,
+                                                                                  float32,
+                                                                                  valuetype [System.Drawing]System.Drawing.FontStyle,
+                                                                                  valuetype [System.Drawing]System.Drawing.GraphicsUnit,
+                                                                                  uint8)
+    IL_05fb:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Font(class [System.Drawing]System.Drawing.Font)
+    IL_0600:  nop
+    IL_0601:  ldarg.0
+    IL_0602:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label3
+    IL_0607:  ldc.i4     0x8a
+    IL_060c:  ldc.i4.s   28
+    IL_060e:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_0613:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_0618:  nop
+    IL_0619:  ldarg.0
+    IL_061a:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label3
+    IL_061f:  ldstr      "label3"
+    IL_0624:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_0629:  nop
+    IL_062a:  ldarg.0
+    IL_062b:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label3
+    IL_0630:  ldc.i4.s   20
+    IL_0632:  ldc.i4.s   15
+    IL_0634:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0639:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_063e:  nop
+    IL_063f:  ldarg.0
+    IL_0640:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label3
+    IL_0645:  ldc.i4.3
+    IL_0646:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_064b:  nop
+    IL_064c:  ldarg.0
+    IL_064d:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label3
+    IL_0652:  ldstr      "px"
+    IL_0657:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_065c:  nop
+    IL_065d:  ldarg.0
+    IL_065e:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label4
+    IL_0663:  ldc.i4.1
+    IL_0664:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_AutoSize(bool)
+    IL_0669:  nop
+    IL_066a:  ldarg.0
+    IL_066b:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label4
+    IL_0670:  ldstr      "Microsoft Sans Serif"
+    IL_0675:  ldc.r4     9.
+    IL_067a:  ldc.i4.0
+    IL_067b:  ldc.i4.3
+    IL_067c:  ldc.i4.0
+    IL_067d:  newobj     instance void [System.Drawing]System.Drawing.Font::.ctor(string,
+                                                                                  float32,
+                                                                                  valuetype [System.Drawing]System.Drawing.FontStyle,
+                                                                                  valuetype [System.Drawing]System.Drawing.GraphicsUnit,
+                                                                                  uint8)
+    IL_0682:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Font(class [System.Drawing]System.Drawing.Font)
+    IL_0687:  nop
+    IL_0688:  ldarg.0
+    IL_0689:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label4
+    IL_068e:  ldc.i4     0x14a
+    IL_0693:  ldc.i4.s   28
+    IL_0695:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_069a:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_069f:  nop
+    IL_06a0:  ldarg.0
+    IL_06a1:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label4
+    IL_06a6:  ldstr      "label4"
+    IL_06ab:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_06b0:  nop
+    IL_06b1:  ldarg.0
+    IL_06b2:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label4
+    IL_06b7:  ldc.i4.s   20
+    IL_06b9:  ldc.i4.s   15
+    IL_06bb:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_06c0:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_06c5:  nop
+    IL_06c6:  ldarg.0
+    IL_06c7:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label4
+    IL_06cc:  ldc.i4.3
+    IL_06cd:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_06d2:  nop
+    IL_06d3:  ldarg.0
+    IL_06d4:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label4
+    IL_06d9:  ldstr      "px"
+    IL_06de:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_06e3:  nop
+    IL_06e4:  ldarg.0
+    IL_06e5:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label4
+    IL_06ea:  ldarg.0
+    IL_06eb:  ldftn      instance void ascii_art.Form1::label4_Click(object,
+                                                                     class [mscorlib]System.EventArgs)
+    IL_06f1:  newobj     instance void [mscorlib]System.EventHandler::.ctor(object,
+                                                                            native int)
+    IL_06f6:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::add_Click(class [mscorlib]System.EventHandler)
+    IL_06fb:  nop
+    IL_06fc:  ldarg.0
+    IL_06fd:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxScale
+    IL_0702:  ldc.i4.s   15
+    IL_0704:  ldc.i4.s   97
+    IL_0706:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_070b:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_0710:  nop
+    IL_0711:  ldarg.0
+    IL_0712:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxScale
+    IL_0717:  ldstr      "txtBxScale"
+    IL_071c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_0721:  nop
+    IL_0722:  ldarg.0
+    IL_0723:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxScale
+    IL_0728:  ldc.i4     0x180
+    IL_072d:  ldc.i4.s   20
+    IL_072f:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0734:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_0739:  nop
+    IL_073a:  ldarg.0
+    IL_073b:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxScale
+    IL_0740:  ldc.i4.4
+    IL_0741:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_0746:  nop
+    IL_0747:  ldarg.0
+    IL_0748:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label5
+    IL_074d:  ldc.i4.1
+    IL_074e:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_AutoSize(bool)
+    IL_0753:  nop
+    IL_0754:  ldarg.0
+    IL_0755:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label5
+    IL_075a:  ldc.i4.s   12
+    IL_075c:  ldc.i4.s   81
+    IL_075e:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_0763:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_0768:  nop
+    IL_0769:  ldarg.0
+    IL_076a:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label5
+    IL_076f:  ldstr      "label5"
+    IL_0774:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_0779:  nop
+    IL_077a:  ldarg.0
+    IL_077b:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label5
+    IL_0780:  ldc.i4.s   64
+    IL_0782:  ldc.i4.s   13
+    IL_0784:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0789:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_078e:  nop
+    IL_078f:  ldarg.0
+    IL_0790:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label5
+    IL_0795:  ldc.i4.5
+    IL_0796:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_079b:  nop
+    IL_079c:  ldarg.0
+    IL_079d:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label5
+    IL_07a2:  ldstr      "Color Scale:"
+    IL_07a7:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_07ac:  nop
+    IL_07ad:  ldarg.0
+    IL_07ae:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnReset
+    IL_07b3:  ldc.i4     0xa3
+    IL_07b8:  ldc.i4.s   123
+    IL_07ba:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_07bf:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_07c4:  nop
+    IL_07c5:  ldarg.0
+    IL_07c6:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnReset
+    IL_07cb:  ldstr      "btnReset"
+    IL_07d0:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_07d5:  nop
+    IL_07d6:  ldarg.0
+    IL_07d7:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnReset
+    IL_07dc:  ldc.i4.s   95
+    IL_07de:  ldc.i4.s   20
+    IL_07e0:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_07e5:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_07ea:  nop
+    IL_07eb:  ldarg.0
+    IL_07ec:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnReset
+    IL_07f1:  ldc.i4.6
+    IL_07f2:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_07f7:  nop
+    IL_07f8:  ldarg.0
+    IL_07f9:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnReset
+    IL_07fe:  ldstr      "Reset options"
+    IL_0803:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0808:  nop
+    IL_0809:  ldarg.0
+    IL_080a:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnReset
+    IL_080f:  ldc.i4.1
+    IL_0810:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor(bool)
+    IL_0815:  nop
+    IL_0816:  ldarg.0
+    IL_0817:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnReset
+    IL_081c:  ldarg.0
+    IL_081d:  ldftn      instance void ascii_art.Form1::btnReset_Click(object,
+                                                                       class [mscorlib]System.EventArgs)
+    IL_0823:  newobj     instance void [mscorlib]System.EventHandler::.ctor(object,
+                                                                            native int)
+    IL_0828:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::add_Click(class [mscorlib]System.EventHandler)
+    IL_082d:  nop
+    IL_082e:  ldarg.0
+    IL_082f:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnGenerate
+    IL_0834:  ldc.i4     0x130
+    IL_0839:  ldc.i4.s   123
+    IL_083b:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_0840:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_0845:  nop
+    IL_0846:  ldarg.0
+    IL_0847:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnGenerate
+    IL_084c:  ldstr      "btnGenerate"
+    IL_0851:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_0856:  nop
+    IL_0857:  ldarg.0
+    IL_0858:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnGenerate
+    IL_085d:  ldc.i4.s   95
+    IL_085f:  ldc.i4.s   20
+    IL_0861:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0866:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_086b:  nop
+    IL_086c:  ldarg.0
+    IL_086d:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnGenerate
+    IL_0872:  ldc.i4.6
+    IL_0873:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_0878:  nop
+    IL_0879:  ldarg.0
+    IL_087a:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnGenerate
+    IL_087f:  ldstr      "Generate Text"
+    IL_0884:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0889:  nop
+    IL_088a:  ldarg.0
+    IL_088b:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnGenerate
+    IL_0890:  ldc.i4.1
+    IL_0891:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor(bool)
+    IL_0896:  nop
+    IL_0897:  ldarg.0
+    IL_0898:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnGenerate
+    IL_089d:  ldarg.0
+    IL_089e:  ldftn      instance void ascii_art.Form1::button2_Click(object,
+                                                                      class [mscorlib]System.EventArgs)
+    IL_08a4:  newobj     instance void [mscorlib]System.EventHandler::.ctor(object,
+                                                                            native int)
+    IL_08a9:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::add_Click(class [mscorlib]System.EventHandler)
+    IL_08ae:  nop
+    IL_08af:  ldarg.0
+    IL_08b0:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleShort
+    IL_08b5:  ldc.i4.s   83
+    IL_08b7:  ldc.i4.s   74
+    IL_08b9:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_08be:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_08c3:  nop
+    IL_08c4:  ldarg.0
+    IL_08c5:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleShort
+    IL_08ca:  ldstr      "btnScaleShort"
+    IL_08cf:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_08d4:  nop
+    IL_08d5:  ldarg.0
+    IL_08d6:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleShort
+    IL_08db:  ldc.i4.s   75
+    IL_08dd:  ldc.i4.s   20
+    IL_08df:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_08e4:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_08e9:  nop
+    IL_08ea:  ldarg.0
+    IL_08eb:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleShort
+    IL_08f0:  ldc.i4.7
+    IL_08f1:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_08f6:  nop
+    IL_08f7:  ldarg.0
+    IL_08f8:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleShort
+    IL_08fd:  ldstr      "Short"
+    IL_0902:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0907:  nop
+    IL_0908:  ldarg.0
+    IL_0909:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleShort
+    IL_090e:  ldc.i4.1
+    IL_090f:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor(bool)
+    IL_0914:  nop
+    IL_0915:  ldarg.0
+    IL_0916:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleShort
+    IL_091b:  ldarg.0
+    IL_091c:  ldftn      instance void ascii_art.Form1::btnScaleShort_Click(object,
+                                                                            class [mscorlib]System.EventArgs)
+    IL_0922:  newobj     instance void [mscorlib]System.EventHandler::.ctor(object,
+                                                                            native int)
+    IL_0927:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::add_Click(class [mscorlib]System.EventHandler)
+    IL_092c:  nop
+    IL_092d:  ldarg.0
+    IL_092e:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnOpen
+    IL_0933:  ldc.i4.s   15
+    IL_0935:  ldc.i4.s   123
+    IL_0937:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_093c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_0941:  nop
+    IL_0942:  ldarg.0
+    IL_0943:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnOpen
+    IL_0948:  ldstr      "btnOpen"
+    IL_094d:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_0952:  nop
+    IL_0953:  ldarg.0
+    IL_0954:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnOpen
+    IL_0959:  ldc.i4.s   95
+    IL_095b:  ldc.i4.s   20
+    IL_095d:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0962:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_0967:  nop
+    IL_0968:  ldarg.0
+    IL_0969:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnOpen
+    IL_096e:  ldc.i4.6
+    IL_096f:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_0974:  nop
+    IL_0975:  ldarg.0
+    IL_0976:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnOpen
+    IL_097b:  ldstr      "Open Image"
+    IL_0980:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0985:  nop
+    IL_0986:  ldarg.0
+    IL_0987:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnOpen
+    IL_098c:  ldc.i4.1
+    IL_098d:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor(bool)
+    IL_0992:  nop
+    IL_0993:  ldarg.0
+    IL_0994:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnOpen
+    IL_0999:  ldarg.0
+    IL_099a:  ldftn      instance void ascii_art.Form1::btnOpen_Click(object,
+                                                                      class [mscorlib]System.EventArgs)
+    IL_09a0:  newobj     instance void [mscorlib]System.EventHandler::.ctor(object,
+                                                                            native int)
+    IL_09a5:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::add_Click(class [mscorlib]System.EventHandler)
+    IL_09aa:  nop
+    IL_09ab:  ldarg.0
+    IL_09ac:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleLong
+    IL_09b1:  ldc.i4     0xa3
+    IL_09b6:  ldc.i4.s   74
+    IL_09b8:  newobj     instance void [System.Drawing]System.Drawing.Point::.ctor(int32,
+                                                                                   int32)
+    IL_09bd:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Location(valuetype [System.Drawing]System.Drawing.Point)
+    IL_09c2:  nop
+    IL_09c3:  ldarg.0
+    IL_09c4:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleLong
+    IL_09c9:  ldstr      "btnScaleLong"
+    IL_09ce:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_09d3:  nop
+    IL_09d4:  ldarg.0
+    IL_09d5:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleLong
+    IL_09da:  ldc.i4.s   75
+    IL_09dc:  ldc.i4.s   20
+    IL_09de:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_09e3:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Size(valuetype [System.Drawing]System.Drawing.Size)
+    IL_09e8:  nop
+    IL_09e9:  ldarg.0
+    IL_09ea:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleLong
+    IL_09ef:  ldc.i4.7
+    IL_09f0:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_TabIndex(int32)
+    IL_09f5:  nop
+    IL_09f6:  ldarg.0
+    IL_09f7:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleLong
+    IL_09fc:  ldstr      "Long"
+    IL_0a01:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0a06:  nop
+    IL_0a07:  ldarg.0
+    IL_0a08:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleLong
+    IL_0a0d:  ldc.i4.1
+    IL_0a0e:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor(bool)
+    IL_0a13:  nop
+    IL_0a14:  ldarg.0
+    IL_0a15:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleLong
+    IL_0a1a:  ldarg.0
+    IL_0a1b:  ldftn      instance void ascii_art.Form1::btnScaleLong_Click(object,
+                                                                           class [mscorlib]System.EventArgs)
+    IL_0a21:  newobj     instance void [mscorlib]System.EventHandler::.ctor(object,
+                                                                            native int)
+    IL_0a26:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::add_Click(class [mscorlib]System.EventHandler)
+    IL_0a2b:  nop
+    IL_0a2c:  ldarg.0
+    IL_0a2d:  ldc.i4.3
+    IL_0a2e:  call       instance void [System.Windows.Forms]System.Windows.Forms.ContainerControl::set_AutoScaleMode(valuetype [System.Windows.Forms]System.Windows.Forms.AutoScaleMode)
+    IL_0a33:  nop
+    IL_0a34:  ldarg.0
+    IL_0a35:  ldc.i4     0x19b
+    IL_0a3a:  ldc.i4     0xa4
+    IL_0a3f:  newobj     instance void [System.Drawing]System.Drawing.Size::.ctor(int32,
+                                                                                  int32)
+    IL_0a44:  call       instance void [System.Windows.Forms]System.Windows.Forms.Form::set_ClientSize(valuetype [System.Drawing]System.Drawing.Size)
+    IL_0a49:  nop
+    IL_0a4a:  ldarg.0
+    IL_0a4b:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0a50:  ldarg.0
+    IL_0a51:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleLong
+    IL_0a56:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0a5b:  nop
+    IL_0a5c:  ldarg.0
+    IL_0a5d:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0a62:  ldarg.0
+    IL_0a63:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnScaleShort
+    IL_0a68:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0a6d:  nop
+    IL_0a6e:  ldarg.0
+    IL_0a6f:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0a74:  ldarg.0
+    IL_0a75:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnGenerate
+    IL_0a7a:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0a7f:  nop
+    IL_0a80:  ldarg.0
+    IL_0a81:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0a86:  ldarg.0
+    IL_0a87:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnOpen
+    IL_0a8c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0a91:  nop
+    IL_0a92:  ldarg.0
+    IL_0a93:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0a98:  ldarg.0
+    IL_0a99:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Button ascii_art.Form1::btnReset
+    IL_0a9e:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0aa3:  nop
+    IL_0aa4:  ldarg.0
+    IL_0aa5:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0aaa:  ldarg.0
+    IL_0aab:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label5
+    IL_0ab0:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0ab5:  nop
+    IL_0ab6:  ldarg.0
+    IL_0ab7:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0abc:  ldarg.0
+    IL_0abd:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxScale
+    IL_0ac2:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0ac7:  nop
+    IL_0ac8:  ldarg.0
+    IL_0ac9:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0ace:  ldarg.0
+    IL_0acf:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label4
+    IL_0ad4:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0ad9:  nop
+    IL_0ada:  ldarg.0
+    IL_0adb:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0ae0:  ldarg.0
+    IL_0ae1:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label3
+    IL_0ae6:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0aeb:  nop
+    IL_0aec:  ldarg.0
+    IL_0aed:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0af2:  ldarg.0
+    IL_0af3:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharW
+    IL_0af8:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0afd:  nop
+    IL_0afe:  ldarg.0
+    IL_0aff:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0b04:  ldarg.0
+    IL_0b05:  ldfld      class [System.Windows.Forms]System.Windows.Forms.TextBox ascii_art.Form1::txtBxCharH
+    IL_0b0a:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0b0f:  nop
+    IL_0b10:  ldarg.0
+    IL_0b11:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0b16:  ldarg.0
+    IL_0b17:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label2
+    IL_0b1c:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0b21:  nop
+    IL_0b22:  ldarg.0
+    IL_0b23:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0b28:  ldarg.0
+    IL_0b29:  ldfld      class [System.Windows.Forms]System.Windows.Forms.Label ascii_art.Form1::label1
+    IL_0b2e:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0b33:  nop
+    IL_0b34:  ldarg.0
+    IL_0b35:  call       instance class [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection [System.Windows.Forms]System.Windows.Forms.Control::get_Controls()
+    IL_0b3a:  ldarg.0
+    IL_0b3b:  ldfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_0b40:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control/ControlCollection::Add(class [System.Windows.Forms]System.Windows.Forms.Control)
+    IL_0b45:  nop
+    IL_0b46:  ldarg.0
+    IL_0b47:  ldstr      "Form1"
+    IL_0b4c:  call       instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Name(string)
+    IL_0b51:  nop
+    IL_0b52:  ldarg.0
+    IL_0b53:  ldstr      "Image to ASCII Generator"
+    IL_0b58:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::set_Text(string)
+    IL_0b5d:  nop
+    IL_0b5e:  ldarg.0
+    IL_0b5f:  ldfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_0b64:  ldc.i4.0
+    IL_0b65:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::ResumeLayout(bool)
+    IL_0b6a:  nop
+    IL_0b6b:  ldarg.0
+    IL_0b6c:  ldfld      class [System.Windows.Forms]System.Windows.Forms.MenuStrip ascii_art.Form1::menuStrip1
+    IL_0b71:  callvirt   instance void [System.Windows.Forms]System.Windows.Forms.Control::PerformLayout()
+    IL_0b76:  nop
+    IL_0b77:  ldarg.0
+    IL_0b78:  ldc.i4.0
+    IL_0b79:  call       instance void [System.Windows.Forms]System.Windows.Forms.Control::ResumeLayout(bool)
+    IL_0b7e:  nop
+    IL_0b7f:  ldarg.0
+    IL_0b80:  call       instance void [System.Windows.Forms]System.Windows.Forms.Control::PerformLayout()
+    IL_0b85:  nop
+    IL_0b86:  ret
+  } // end of method Form1::InitializeComponent
+
+} // end of class ascii_art.Form1
+
+.class private abstract auto ansi sealed beforefieldinit ascii_art.Program
+       extends [mscorlib]System.Object
+{
+  .method private hidebysig static void  Main() cil managed
+  {
+    .entrypoint
+    .custom instance void [mscorlib]System.STAThreadAttribute::.ctor() = ( 01 00 00 00 ) 
+    // Code size       26 (0x1a)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  call       void [System.Windows.Forms]System.Windows.Forms.Application::EnableVisualStyles()
+    IL_0006:  nop
+    IL_0007:  ldc.i4.0
+    IL_0008:  call       void [System.Windows.Forms]System.Windows.Forms.Application::SetCompatibleTextRenderingDefault(bool)
+    IL_000d:  nop
+    IL_000e:  newobj     instance void ascii_art.Form1::.ctor()
+    IL_0013:  call       void [System.Windows.Forms]System.Windows.Forms.Application::Run(class [System.Windows.Forms]System.Windows.Forms.Form)
+    IL_0018:  nop
+    IL_0019:  ret
+  } // end of method Program::Main
+
+} // end of class ascii_art.Program
+
+.class private auto ansi beforefieldinit ascii_art.Properties.Resources
+       extends [mscorlib]System.Object
+{
+  .custom instance void [System]System.CodeDom.Compiler.GeneratedCodeAttribute::.ctor(string,
+                                                                                      string) = ( 01 00 33 53 79 73 74 65 6D 2E 52 65 73 6F 75 72   // ..3System.Resour
+                                                                                                  63 65 73 2E 54 6F 6F 6C 73 2E 53 74 72 6F 6E 67   // ces.Tools.Strong
+                                                                                                  6C 79 54 79 70 65 64 52 65 73 6F 75 72 63 65 42   // lyTypedResourceB
+                                                                                                  75 69 6C 64 65 72 07 34 2E 30 2E 30 2E 30 00 00 ) // uilder.4.0.0.0..
+  .custom instance void [mscorlib]System.Diagnostics.DebuggerNonUserCodeAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field private static class [mscorlib]System.Resources.ResourceManager resourceMan
+  .field private static class [mscorlib]System.Globalization.CultureInfo resourceCulture
+  .method assembly hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [mscorlib]System.Object::.ctor()
+    IL_0006:  nop
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method Resources::.ctor
+
+  .method assembly hidebysig specialname static 
+          class [mscorlib]System.Resources.ResourceManager 
+          get_ResourceManager() cil managed
+  {
+    // Code size       57 (0x39)
+    .maxstack  2
+    .locals init ([0] bool V_0,
+             [1] class [mscorlib]System.Resources.ResourceManager temp,
+             [2] class [mscorlib]System.Resources.ResourceManager V_2)
+    IL_0000:  nop
+    IL_0001:  ldsfld     class [mscorlib]System.Resources.ResourceManager ascii_art.Properties.Resources::resourceMan
+    IL_0006:  ldnull
+    IL_0007:  ceq
+    IL_0009:  stloc.0
+    IL_000a:  ldloc.0
+    IL_000b:  brfalse.s  IL_002f
+
+    IL_000d:  nop
+    IL_000e:  ldstr      "ascii_art.Properties.Resources"
+    IL_0013:  ldtoken    ascii_art.Properties.Resources
+    IL_0018:  call       class [mscorlib]System.Type [mscorlib]System.Type::GetTypeFromHandle(valuetype [mscorlib]System.RuntimeTypeHandle)
+    IL_001d:  callvirt   instance class [mscorlib]System.Reflection.Assembly [mscorlib]System.Type::get_Assembly()
+    IL_0022:  newobj     instance void [mscorlib]System.Resources.ResourceManager::.ctor(string,
+                                                                                         class [mscorlib]System.Reflection.Assembly)
+    IL_0027:  stloc.1
+    IL_0028:  ldloc.1
+    IL_0029:  stsfld     class [mscorlib]System.Resources.ResourceManager ascii_art.Properties.Resources::resourceMan
+    IL_002e:  nop
+    IL_002f:  ldsfld     class [mscorlib]System.Resources.ResourceManager ascii_art.Properties.Resources::resourceMan
+    IL_0034:  stloc.2
+    IL_0035:  br.s       IL_0037
+
+    IL_0037:  ldloc.2
+    IL_0038:  ret
+  } // end of method Resources::get_ResourceManager
+
+  .method assembly hidebysig specialname static 
+          class [mscorlib]System.Globalization.CultureInfo 
+          get_Culture() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init ([0] class [mscorlib]System.Globalization.CultureInfo V_0)
+    IL_0000:  nop
+    IL_0001:  ldsfld     class [mscorlib]System.Globalization.CultureInfo ascii_art.Properties.Resources::resourceCulture
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method Resources::get_Culture
+
+  .method assembly hidebysig specialname static 
+          void  set_Culture(class [mscorlib]System.Globalization.CultureInfo 'value') cil managed
+  {
+    // Code size       8 (0x8)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.0
+    IL_0002:  stsfld     class [mscorlib]System.Globalization.CultureInfo ascii_art.Properties.Resources::resourceCulture
+    IL_0007:  ret
+  } // end of method Resources::set_Culture
+
+  .property class [mscorlib]System.Resources.ResourceManager
+          ResourceManager()
+  {
+    .custom instance void [System]System.ComponentModel.EditorBrowsableAttribute::.ctor(valuetype [System]System.ComponentModel.EditorBrowsableState) = ( 01 00 02 00 00 00 00 00 ) 
+    .get class [mscorlib]System.Resources.ResourceManager ascii_art.Properties.Resources::get_ResourceManager()
+  } // end of property Resources::ResourceManager
+  .property class [mscorlib]System.Globalization.CultureInfo
+          Culture()
+  {
+    .custom instance void [System]System.ComponentModel.EditorBrowsableAttribute::.ctor(valuetype [System]System.ComponentModel.EditorBrowsableState) = ( 01 00 02 00 00 00 00 00 ) 
+    .get class [mscorlib]System.Globalization.CultureInfo ascii_art.Properties.Resources::get_Culture()
+    .set void ascii_art.Properties.Resources::set_Culture(class [mscorlib]System.Globalization.CultureInfo)
+  } // end of property Resources::Culture
+} // end of class ascii_art.Properties.Resources
+
+.class private auto ansi sealed beforefieldinit ascii_art.Properties.Settings
+       extends [System]System.Configuration.ApplicationSettingsBase
+{
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [System]System.CodeDom.Compiler.GeneratedCodeAttribute::.ctor(string,
+                                                                                      string) = ( 01 00 4B 4D 69 63 72 6F 73 6F 66 74 2E 56 69 73   // ..KMicrosoft.Vis
+                                                                                                  75 61 6C 53 74 75 64 69 6F 2E 45 64 69 74 6F 72   // ualStudio.Editor
+                                                                                                  73 2E 53 65 74 74 69 6E 67 73 44 65 73 69 67 6E   // s.SettingsDesign
+                                                                                                  65 72 2E 53 65 74 74 69 6E 67 73 53 69 6E 67 6C   // er.SettingsSingl
+                                                                                                  65 46 69 6C 65 47 65 6E 65 72 61 74 6F 72 08 31   // eFileGenerator.1
+                                                                                                  31 2E 30 2E 30 2E 30 00 00 )                      // 1.0.0.0..
+  .field private static class ascii_art.Properties.Settings defaultInstance
+  .method public hidebysig specialname static 
+          class ascii_art.Properties.Settings 
+          get_Default() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init ([0] class ascii_art.Properties.Settings V_0)
+    IL_0000:  nop
+    IL_0001:  ldsfld     class ascii_art.Properties.Settings ascii_art.Properties.Settings::defaultInstance
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method Settings::get_Default
+
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Code size       8 (0x8)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [System]System.Configuration.ApplicationSettingsBase::.ctor()
+    IL_0006:  nop
+    IL_0007:  ret
+  } // end of method Settings::.ctor
+
+  .method private hidebysig specialname rtspecialname static 
+          void  .cctor() cil managed
+  {
+    // Code size       21 (0x15)
+    .maxstack  8
+    IL_0000:  newobj     instance void ascii_art.Properties.Settings::.ctor()
+    IL_0005:  call       class [System]System.Configuration.SettingsBase [System]System.Configuration.SettingsBase::Synchronized(class [System]System.Configuration.SettingsBase)
+    IL_000a:  castclass  ascii_art.Properties.Settings
+    IL_000f:  stsfld     class ascii_art.Properties.Settings ascii_art.Properties.Settings::defaultInstance
+    IL_0014:  ret
+  } // end of method Settings::.cctor
+
+  .property class ascii_art.Properties.Settings
+          Default()
+  {
+    .get class ascii_art.Properties.Settings ascii_art.Properties.Settings::get_Default()
+  } // end of property Settings::Default
+} // end of class ascii_art.Properties.Settings
+
+
+// =============================================================
+
+// *********** DISASSEMBLY COMPLETE ***********************
+// WARNING: Created Win32 resource file ascii-art-disassembly.res

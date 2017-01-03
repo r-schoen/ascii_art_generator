@@ -7,3 +7,6 @@ C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.Proper
 C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.csproj.GenerateResource.Cache
 C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.exe
 C:\Users\Russell\Source\ascii_art_generator\ascii_art\obj\Debug\ascii_art.pdb
+C:\dev\ascii_art_generator\ascii_art\bin\Debug\ascii_art.exe.config
+C:\dev\ascii_art_generator\ascii_art\obj\Debug\ascii_art.exe
+C:\dev\ascii_art_generator\ascii_art\obj\Debug\ascii_art.pdb

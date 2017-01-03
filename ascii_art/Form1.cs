@@ -137,7 +137,7 @@ namespace ascii_art
                 if ((stream = saveFileDialog1.OpenFile()) != null)
                 {
                     StreamWriter sw;
-                    if (bmpToText())
+                    if (bmpToText()) // call text converter
                     {
                         sw = new StreamWriter(stream);
                         sw.WriteLine(output);
